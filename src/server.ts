@@ -1,10 +1,11 @@
 import { app } from "./app.js";
+import { env } from "./env/env.js";
 
 app
   .listen({
-    port: 3000,
+    port: env.PORT,
     host: "0.0.0.0",
   })
   .then(() => {
-    console.log("Server is running on port 3000");
+    console.log(`Server is running on port ${env.PORT}`);
   });
